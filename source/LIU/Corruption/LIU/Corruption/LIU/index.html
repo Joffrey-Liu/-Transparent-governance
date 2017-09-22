@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/googlemap.js"></script>
+</head>
+<style>
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#map {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100%;
+}
+.nav{
+			max-height: 400px;
+			overflow-y:scroll; 
+}
+
+
+.card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+
+.card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+	background: #fff;
+}
+.card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
+	background: #e6e6e6;
+}
+
+.card-title {
+    font-size: 1.28571429em;
+    font-weight: 700;
+    line-height: 1.2857em;
+}
+
+.card-text {
+    clear: both;
+    margin-top: .5em;
+    color: rgba(0, 0, 0, .68);
+}
+
+.card-footer {
+    font-size: 1em;
+    position: static;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    padding: .75em 1em;
+    color: rgba(0, 0, 0, .4);
+    border-top: 1px solid rgba(0, 0, 0, .05) !important;
+    background: #e6e6e6;
+}
+</style>
+<body>
+
+	 <section>
+    <div class="container">
+        <div id="map"></div>
+        <div class="col-xs-3 col-sm-3 sidebar-offcanvas" id="sidebar"   style="left: 0%;position:absolute;">
+		  <div class="well sidebar-nav ">
+		  
+			  <ul class="nav nav-pills " role="tablist" style="overflow: none";>
+						<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Company</a></li>
+						<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Engineer</a></li>
+			  </ul>
+			  
+			  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                    <p>The full-length Max Air unit delivers excellent cushioning with enhanced flexibility for smoother transitions through footstrike.</p> 
+                    <p>Dynamic Flywire cables integrate with the laces and wrap your midfoot for a truly adaptive, supportive fit.</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">
+                        <ul class="nav">
+						  <li><strong>Select a subject</strong></li>
+						  <li class="active"><a href="#">Maths</a></li>
+						  <li><a href="#">English</a></li>
+						  <li><a href="#">Art and Design</a></li>
+						  <li><a href="#">Drama</a></li>
+
+						</ul>  
+                    </div>
+              </div>
+			  
+			
+			</div><!--/span-->
+		</div><!--/row-->
+		<div class="col-xs-3 col-sm-3"  style="right:0;position:absolute;">
+			<div class="card-deck">
+				<div class="card">
+					<img class="card-img-top" src="..." alt="Card image cap">
+					<div class="card-block">
+					  <h4 class="card-title">Card title</h4>
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					</div>
+					<div class="card-footer">
+					  <small class="text-muted">Last updated 3 mins ago</small>
+					</div>
+				</div>
+				<div class="card" style="margin-top:50px;">
+					<img class="card-img-top" src="..." alt="Card image cap">
+					<div class="card-block">
+					  <h4 class="card-title">Card title</h4>
+					  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+					</div>
+					<div class="card-footer">
+					  <small class="text-muted">Last updated 3 mins ago</small>
+					</div>
+				</div>
+				<div class="card" style="margin-top:50px;">
+					<img class="card-img-top" src="..." alt="Card image cap">
+					<div class="card-block">
+					  <h4 class="card-title">Card title</h4>
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+					</div>
+					<div class="card-footer">
+					  <small class="text-muted">Last updated 3 mins ago</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    </div>
+</section>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6pqovakyNJz1AlnJIGBW-6RUSK_eFf0w&callback=initMap"></script>
+</body>
+</html>
